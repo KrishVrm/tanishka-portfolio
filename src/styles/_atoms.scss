@@ -12,19 +12,25 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
   width: 11rem;
 
-  //   &:hover {
-  //     background-color: darken(
-  //       var(--cta-color),
-  //       10%
-  //     ); // Darken background on hover
-  //     transform: scale(1.05); // Slight zoom effect
-  //   }
-
   &:active {
-    transform: scale(0.95); // Slight shrink effect on click
+    transform: scale(0.97); // Slight shrink effect on click
   }
 
   a {
     color: var(--background-color);
   }
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+}
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.svg_icon {
+  height: clamp(2rem, 3vw, 2.5rem);
 }

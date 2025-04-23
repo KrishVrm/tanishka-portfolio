@@ -3,6 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 9rem 0.5rem 9rem;
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+    gap: 1rem;
+  }
   // background: #eeecde;
 
   .logo {
@@ -30,19 +34,9 @@
             color: var(--cta-color);
           }
 
-          &:after {
-            content: "";
-            position: absolute;
-            bottom: -12px; // Position the border just below the text
-            left: 0;
-            width: 0;
-            height: 3px; // Thickness of the border
-            background-color: var(--cta-color);
-            transition: width 0.25s ease;
-          }
-
-          &:hover:after {
-            width: 100%; // Expand the border to full width on hover
+          svg {
+            width: auto;
+            height: 1.8rem;
           }
         }
       }
