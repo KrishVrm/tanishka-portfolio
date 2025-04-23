@@ -1,0 +1,30 @@
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--cta-color); // Background color
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 11rem;
+
+  //   &:hover {
+  //     background-color: darken(
+  //       var(--cta-color),
+  //       10%
+  //     ); // Darken background on hover
+  //     transform: scale(1.05); // Slight zoom effect
+  //   }
+
+  &:active {
+    transform: scale(0.95); // Slight shrink effect on click
+  }
+
+  a {
+    color: var(--background-color);
+  }
+}

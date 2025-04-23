@@ -1,0 +1,80 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  padding-top: 10rem;
+
+  background-color: var(--background-color);
+
+  .contact-left {
+    flex: 1;
+    min-width: 300px;
+
+    .contact-title {
+      font-size: 2.5rem;
+      color: var(--heading-color);
+      margin-bottom: 1rem;
+    }
+
+    .contact-description {
+      font-size: 1.2rem;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+  }
+
+  .contact-right {
+    flex: 1;
+    min-width: 300px;
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 1rem;
+          color: var(--text-color);
+          margin-bottom: 0.5rem;
+        }
+
+        input,
+        textarea {
+          padding: 0.8rem;
+          font-size: 1rem;
+          border: 1px solid #ccc;
+          border-radius: var(--border-radius);
+          outline: none;
+          transition: border-color 0.3s;
+
+          &:focus {
+            border-color: var(--cta-color, #f39c12);
+          }
+        }
+      }
+
+      .submit-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        color: #fff;
+        background: var(
+          --cta-gradient,
+          linear-gradient(90deg, #ff7e5f, #feb47b)
+        );
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: var(--cta-color, #f39c12);
+        }
+      }
+    }
+  }
+}

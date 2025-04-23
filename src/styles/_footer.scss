@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: hsl(0, 0%, 14%);
+  color: #fff;
+
+  .footer-socials {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(
+          --cta-color,
+          #f39c12
+        ); // Use the CTA color or fallback to orange
+      }
+    }
+  }
+
+  .footer-logo {
+    h1 {
+      font-size: 1.8rem;
+      font-family: var(--logo-font-two, "Playfair Display");
+      font-style: italic;
+    }
+  }
+}

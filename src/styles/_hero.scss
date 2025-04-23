@@ -1,0 +1,54 @@
+.hero {
+  display: flex;
+  // align-items: center;
+  justify-content: space-between;
+  height: 100vh; // Full-screen height
+  padding: 4.5rem;
+
+  // background: #eeecde;
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: url("../assets/tanishka-hero.webp") no-repeat center center;
+    // height: 100%;
+    // background-size: contain;
+    img {
+      max-width: 60%; // Adjust image size for better responsiveness
+      height: auto;
+    }
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 4.5rem;
+    padding-right: 0; // border: 2px solid red;
+    gap: 3rem;
+
+    h1 {
+      font-size: 4.4rem; // Larger font size for full-screen layout
+      //   color: white;
+      line-height: 1.1;
+
+      em {
+        font-style: italic;
+        font-family: var(--logo-font-two);
+        text-decoration: underline wavy var(--cta-color);
+        text-underline-offset: 13px;
+      }
+    }
+
+    p {
+      font-size: 1.2rem; // Slightly larger font for better readability
+      //   color: white;
+      // width: 27rem;
+    }
+
+    .cta-button {
+      margin-top: 3rem;
+    }
+  }
+}

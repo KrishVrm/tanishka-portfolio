@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 9rem 0.5rem 9rem;
+  // background: #eeecde;
+
+  .logo {
+    h1 {
+      font-size: 3rem;
+      font-family: var(--logo-font);
+      font-style: italic;
+      font-weight: 500;
+    }
+  }
+
+  .navbar {
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2.5rem;
+
+      li {
+        a {
+          text-decoration: none;
+          position: relative;
+          transition: color 0.25s;
+          color: var(--primary-color);
+          &:hover {
+            color: var(--cta-color);
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -12px; // Position the border just below the text
+            left: 0;
+            width: 0;
+            height: 3px; // Thickness of the border
+            background-color: var(--cta-color);
+            transition: width 0.25s ease;
+          }
+
+          &:hover:after {
+            width: 100%; // Expand the border to full width on hover
+          }
+        }
+      }
+    }
+  }
+}
