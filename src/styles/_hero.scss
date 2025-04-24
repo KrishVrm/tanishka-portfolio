@@ -77,3 +77,54 @@
     }
   }
 }
+
+.popup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); // Semi-transparent background
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .popup-content {
+    background: var(--background-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--heading-color);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-color);
+    }
+
+    .close-popup {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      color: #fff;
+      background: none;
+      border: none;
+      border-radius: var(--border-radius);
+      text-decoration: underline;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      // &:hover {
+      //   background: darken(var(--cta-color), 10%);
+      // }
+    }
+  }
+}
