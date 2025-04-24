@@ -1,6 +1,5 @@
 import React from "react";
-// import tanishkaHero from "../assets/hero-image.webp";
-import tanishkaHero from "../assets/hero-image.webp"; // Replace with Tanishka's actual photo
+import tanishkaHero from "../assets/hero-image2.webp"; // Replace with Tanishka's actual photo
 
 const Hero = () => {
   return (

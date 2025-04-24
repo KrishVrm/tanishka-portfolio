@@ -72,8 +72,8 @@ input {
 }
 @media (max-width: 63.9375em) {
   .header {
-    flex-direction: column;
     gap: 1rem;
+    padding: 1rem 2rem 2rem 2rem;
   }
 }
 .header .logo h1 {
@@ -86,17 +86,19 @@ input {
   list-style: none;
   display: flex;
   gap: 2.5rem;
+  margin-top: 6px;
 }
-.header .navbar .nav-links li a {
+.header .navbar .nav-links a {
   text-decoration: none;
   position: relative;
   transition: color 0.25s;
   color: var(--primary-color);
+  font-size: 0px;
 }
-.header .navbar .nav-links li a:hover {
+.header .navbar .nav-links a:hover {
   color: var(--cta-color);
 }
-.header .navbar .nav-links li a svg {
+.header .navbar .nav-links a svg {
   width: auto;
   height: 1.8rem;
 }
@@ -112,7 +114,6 @@ input {
     flex-direction: column-reverse;
     height: auto;
     padding: 0;
-    padding-top: 2rem;
     gap: 2rem;
   }
 }
@@ -125,6 +126,7 @@ input {
 .hero .hero-image img {
   max-width: 60%;
   height: auto;
+  border-radius: var(--border-radius);
 }
 .hero .hero-content {
   display: flex;
@@ -165,6 +167,7 @@ input {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
+  padding-top: 5rem;
   background-color: var(--background-color);
 }
 .projects .projects-title {
@@ -368,7 +371,7 @@ input {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  font-size: clamp(2.2rem, 5vw, 4.4rem);
 }
 
 h2 {
