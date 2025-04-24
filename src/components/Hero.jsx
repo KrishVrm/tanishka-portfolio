@@ -1,5 +1,6 @@
 import React from "react";
-import tanishkaHero from "../assets/hero-image.webp";
+// import tanishkaHero from "../assets/hero-image.webp";
+import tanishkaHero from "../assets/hero-image.webp"; // Replace with Tanishka's actual photo
 
 const Hero = () => {
   return (
@@ -8,10 +9,10 @@ const Hero = () => {
         <h1>
           Nice to meet you! I'm <em>tanishka</em>.
         </h1>
-        <p>Professional designs with a side of personality.</p>
-        <button className="cta-button">
-          <a href="#contact">View Artwork</a>
-        </button>
+        <p>I make professional designs with a side of personality.</p>
+        <a href="#artwork">
+          <button className="cta-button">View Artwork</button>
+        </a>
       </div>
       <div className="hero-image">
         <img

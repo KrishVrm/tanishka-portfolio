@@ -6,6 +6,7 @@
   --logo-font: "Niconne", serif;
   --primary-font: "Montserrat", serif;
   --border-radius: 4px;
+  --underline-offset: 12px;
   --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -135,7 +136,7 @@ input {
 }
 @media (max-width: 63.9375em) {
   .hero .hero-content {
-    padding: 0;
+    padding: 0 2rem;
     text-align: center;
     align-items: center;
     gap: 2.5rem;
@@ -148,7 +149,7 @@ input {
   font-style: italic;
   -webkit-text-decoration: underline wavy var(--cta-color);
           text-decoration: underline wavy var(--cta-color);
-  text-underline-offset: 12px;
+  text-underline-offset: var(--underline-offset);
 }
 .hero .hero-content .cta-button {
   margin-top: 3rem;
@@ -164,7 +165,6 @@ input {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  padding-top: 6rem;
   background-color: var(--background-color);
 }
 .projects .projects-title {
@@ -173,10 +173,14 @@ input {
   color: var(--heading-color);
   margin-bottom: 2rem;
 }
+.projects .projects-title span {
+  -webkit-text-decoration: underline wavy var(--cta-color);
+          text-decoration: underline wavy var(--cta-color);
+  text-underline-offset: var(--underline-offset);
+}
 .projects .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 300px;
   gap: 1.5rem;
   width: 100%;
   max-width: 1200px;
@@ -195,7 +199,7 @@ input {
   transition: transform 0.3s ease;
 }
 .projects .projects-grid .project-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.02);
 }
 .projects .projects-grid .project-item .project-overlay {
   position: absolute;
@@ -213,6 +217,40 @@ input {
 }
 .projects .projects-grid .project-item:hover .project-overlay {
   opacity: 1;
+}
+
+.preview-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.preview-modal .preview-content {
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+.preview-modal .preview-content img {
+  max-width: 100%;
+  max-height: 70vh;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+}
+.preview-modal .preview-content p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
 }
 
 .footer {
