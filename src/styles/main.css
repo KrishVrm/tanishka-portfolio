@@ -112,7 +112,6 @@ input {
 @media (max-width: 63.9375em) {
   .hero {
     flex-direction: column-reverse;
-    height: auto;
     padding: 0;
     gap: 2rem;
   }
@@ -122,11 +121,9 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.hero .hero-image img {
-  max-width: 60%;
-  height: auto;
-  border-radius: var(--border-radius);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .hero .hero-content {
   display: flex;

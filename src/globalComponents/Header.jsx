@@ -36,7 +36,7 @@ const Header = () => {
           </a>
 
           <a
-            href="https://www.instagram.com/.tannishka?igsh=Z3Q2ejg1d3JwbXI="
+            href="https://www.instagram.com/_.tannishka_/"
             target="_blank"
             rel="noopener noreferrer"
           >
