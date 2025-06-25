@@ -4,7 +4,21 @@
   align-items: center;
   padding: 2rem;
   padding-top: 5rem;
+  padding-bottom: 10rem;
   background-color: var(--background-color);
+  height: 100vh;
+
+  .projects-header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .projects-title {
+      margin-bottom: 0; // Remove bottom margin for alignment
+    }
+  }
 
   .projects-title {
     text-align: center;
@@ -17,12 +31,137 @@
     }
   }
 
+  .tab-buttons {
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: center;
+    gap: 2rem;
+
+    .tab-btn {
+      // padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: var(--border-radius);
+      background: none; // Remove background color
+      color: var(--text-color);
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.2s, box-shadow 0.2s, text-decoration 0.2s;
+      box-shadow: none; // Remove box-shadow
+
+      &:hover,
+      &:focus {
+        color: var(--cta-color);
+        outline: none;
+      }
+
+      &.active {
+        color: var(--heading-color);
+        background: none; // Ensure no background
+        box-shadow: none;
+      }
+    }
+  }
+
+  .tab-dropdown {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+
+    .tab-dropdown-toggle {
+      padding: 0.6rem 2.5rem 0.6rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: var(--border-radius);
+      background: none;
+      color: var(--heading-color);
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      transition: color 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+    }
+
+    .tab-dropdown-arrow {
+      font-size: 1.1em;
+      margin-left: 0.5em;
+      color: var(--cta-color);
+    }
+
+    .tab-dropdown-menu {
+      position: absolute;
+      top: 110%;
+      left: 0;
+      right: 0;
+      background: var(--background-color);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      min-width: 180px;
+      padding: 0.5rem 0;
+      animation: fadeIn 0.2s;
+    }
+
+    .tab-dropdown-item {
+      padding: 0.7rem 1.5rem;
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1rem;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+      &:hover,
+      &:focus {
+        background: var(--cta-color);
+        color: #fff;
+        outline: none;
+      }
+      &.active {
+        color: var(--heading-color);
+        background: none;
+      }
+    }
+  }
+
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
     width: 100%;
     max-width: 1200px;
+
+    // Posters grid: 3 columns, square-ish
+    &.posters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    // Banners grid: 2 columns, wide aspect
+    &.banners-grid {
+      display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+    }
+
+    // Thumbnails grid: 5 columns, small squares
+    &.thumbnails-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+      .project-item img {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
+    }
 
     .project-item {
       position: relative;
@@ -32,9 +171,8 @@
 
       img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
         transition: transform 0.3s ease;
+        display: block;
       }
 
       &:hover img {
@@ -70,7 +208,7 @@
   width: 100%;
   height: 100%;
   backdrop-filter: blur(1px);
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,5 +235,16 @@
       color: var(--text-color);
       margin-bottom: 1rem;
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

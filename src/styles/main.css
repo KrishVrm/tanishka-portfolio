@@ -208,7 +208,19 @@ input {
   align-items: center;
   padding: 2rem;
   padding-top: 5rem;
+  padding-bottom: 10rem;
   background-color: var(--background-color);
+  height: 100vh;
+}
+.projects .projects-header {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.projects .projects-header .projects-title {
+  margin-bottom: 0;
 }
 .projects .projects-title {
   text-align: center;
@@ -221,12 +233,123 @@ input {
           text-decoration: underline wavy var(--cta-color);
   text-underline-offset: var(--underline-offset);
 }
+.projects .tab-buttons {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: center;
+  gap: 2rem;
+}
+.projects .tab-buttons .tab-btn {
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s, box-shadow 0.2s, -webkit-text-decoration 0.2s;
+  transition: color 0.2s, box-shadow 0.2s, text-decoration 0.2s;
+  transition: color 0.2s, box-shadow 0.2s, text-decoration 0.2s, -webkit-text-decoration 0.2s;
+  box-shadow: none;
+}
+.projects .tab-buttons .tab-btn:hover, .projects .tab-buttons .tab-btn:focus {
+  color: var(--cta-color);
+  outline: none;
+}
+.projects .tab-buttons .tab-btn.active {
+  color: var(--heading-color);
+  background: none;
+  box-shadow: none;
+}
+.projects .tab-dropdown {
+  position: relative;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.projects .tab-dropdown .tab-dropdown-toggle {
+  padding: 0.6rem 2.5rem 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  background: none;
+  color: var(--heading-color);
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: color 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+.projects .tab-dropdown .tab-dropdown-arrow {
+  font-size: 1.1em;
+  margin-left: 0.5em;
+  color: var(--cta-color);
+}
+.projects .tab-dropdown .tab-dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  padding: 0.5rem 0;
+  animation: fadeIn 0.2s;
+}
+.projects .tab-dropdown .tab-dropdown-item {
+  padding: 0.7rem 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.projects .tab-dropdown .tab-dropdown-item:hover, .projects .tab-dropdown .tab-dropdown-item:focus {
+  background: var(--cta-color);
+  color: #fff;
+  outline: none;
+}
+.projects .tab-dropdown .tab-dropdown-item.active {
+  color: var(--heading-color);
+  background: none;
+}
 .projects .projects-grid {
+  width: 100%;
+  max-width: 1200px;
+}
+.projects .projects-grid.posters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.projects .projects-grid.posters-grid img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.projects .projects-grid.banners-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  width: 100%;
-  max-width: 1200px;
+}
+.projects .projects-grid.thumbnails-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+.projects .projects-grid.thumbnails-grid .project-item img {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .projects .projects-grid .project-item {
   position: relative;
@@ -236,10 +359,8 @@ input {
 }
 .projects .projects-grid .project-item img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   transition: transform 0.3s ease;
+  display: block;
 }
 .projects .projects-grid .project-item:hover img {
   transform: scale(1.02);
@@ -270,7 +391,7 @@ input {
   height: 100%;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -296,6 +417,16 @@ input {
   margin-bottom: 1rem;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .footer {
   display: flex;
   justify-content: space-between;
