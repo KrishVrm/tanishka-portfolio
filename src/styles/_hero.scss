@@ -2,7 +2,9 @@
   display: flex;
   justify-content: space-between;
   height: 100vh; // Full-screen height
-  padding: 4.5rem;
+  padding: var(--global-padding-left-right);
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
 
   @include breakpoint-down(medium) {
     flex-direction: column-reverse;
@@ -16,7 +18,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-position: center;
+    background-position: right;
+    @include breakpoint-down(medium) {
+      background-position: center;
+    }
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -25,9 +30,8 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    padding: 4.5rem;
-    padding-right: 0; // border: 2px solid red;
     gap: 3rem;
+    padding-top: 4.5rem;
 
     @include breakpoint-down(medium) {
       padding: 0 2rem;

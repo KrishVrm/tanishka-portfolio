@@ -2,10 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: var(--global-padding-left-right);
   background-color: hsl(0, 0%, 14%);
   color: #fff;
-
+  height: 5rem;
+  @include breakpoint-down(medium) {
+   padding: 2rem;
+  }
   .footer-socials {
     display: flex;
     gap: 1rem;

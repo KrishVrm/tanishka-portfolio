@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FaFacebook,
   FaTwitter,
@@ -10,11 +9,11 @@ import {
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-logo">
-        <h1>Tanishka</h1>
+      <div className="logo">
+        <h1>tanishka.</h1>
       </div>
       <div className="footer-socials">
-        <a
+        {/* <a
           href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -23,7 +22,7 @@ const Footer = () => {
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
           <FaTwitter />
-        </a>
+        </a> */}
         <a
           href="https://instagram.com"
           target="_blank"
@@ -38,9 +37,9 @@ const Footer = () => {
         >
           <FaLinkedin />
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        {/* <a href="https://github.com" target="_blank" rel="noopener noreferrer">
           <FaGithub />
-        </a>
+        </a> */}
       </div>
     </footer>
   );

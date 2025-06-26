@@ -3,6 +3,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 9rem 0.5rem 9rem;
+  padding: var(--global-padding-left-right);
+  padding-top: 1.3rem;
+  padding-bottom: .5rem;
   @include breakpoint-down(medium) {
     // flex-direction: column;
     gap: 1rem;
@@ -10,14 +13,6 @@
   }
   // background: #eeecde;
 
-  .logo {
-    h1 {
-      font-size: 3rem;
-      font-family: var(--logo-font);
-      font-style: italic;
-      font-weight: 500;
-    }
-  }
 
   .navbar {
     .nav-links {

@@ -3,7 +3,7 @@ import "./styles/main.css";
 import Hero from "./components/Hero";
 import Header from "./globalComponents/Header";
 import Projects from "./components/Projects";
-import Footer from "./components/Footer";
+import Footer from "./globalComponents/Footer";
 import Contact from "./components/Contact";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Hero />
       <Projects />
       {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
